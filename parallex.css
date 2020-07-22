@@ -81,6 +81,7 @@ html {
 }
 .section-dark{
     background:rgb(15, 15, 15);
+    color:white;
 }
 .section h2{
     font-size:30px;
