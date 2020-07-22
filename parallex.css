@@ -74,3 +74,14 @@ html {
     letter-spacing: 8px;
     text-transform: uppercase;
 }
+.section{
+    width:100%;
+    text-align:center;
+    padding:10px 20px;
+}
+.section-dark{
+    background:rgb(15, 15, 15);
+}
+.section h2{
+    font-size:30px;
+}
