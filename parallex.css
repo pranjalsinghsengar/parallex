@@ -1,0 +1,76 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    line-height: 1em;
+}
+
+.pimg1 {
+    background: url("image2.jpg");
+    min-height: 100%;
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 
+    fixed = prallex
+    scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+.pimg2 {
+    background: url("image3.jpg");
+    min-height: 400px;
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 
+    fixed = prallex
+    scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+.pimg3 {
+    background: url("image4.jpg");
+    min-height: 400px;
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 
+    fixed = prallex
+    scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+.pimg4 {
+    background: url("image2.jpg");
+    min-height: 400px;
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 
+    fixed = prallex
+    scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+.ptext {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    font-size: 30px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
