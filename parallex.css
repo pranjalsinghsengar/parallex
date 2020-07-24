@@ -259,3 +259,16 @@ ul a {
         opacity: 1;
     }
 }
+
+.section {
+    text-align: center;
+}
+
+.section-dark {
+    background: rgb(15, 15, 15);
+    color: white;
+}
+
+.section h2 {
+    font-size: 30px;
+}
