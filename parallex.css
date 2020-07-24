@@ -1,12 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 body,
 html {
     height: 100%;
     margin: 0;
     line-height: 1em;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.box {
+    display: none;
+}
+
+.nav-bar {
+    width: 100%;
+    height: fit-content;
+    display: inline-flex;
+}
+
+.nav-bar h1 {
+    font-size: 30px;
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: left;
+    padding: 10px;
+    margin: 20px 50px;
+    width: 50%;
+}
+
+ul {
+    display: inline-flex;
+    width: auto;
+    margin-right: 50px;
+}
+
+ul a {
+    margin: 10px 30px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.meanu::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    transition: width .6s;
+    background: rgba(0, 0, 0, 0.568);
+    margin: 3px 0;
+}
+
+.meanu:hover::after {
+    width: 95%;
+    transition: width .6s;
 }
 
 .pimg1 {
-    background: url("image2.jpg");
+    background: url("image2-min.jpg");
     min-height: 100%;
     position: relative;
     opacity: 0.70;
@@ -21,7 +72,7 @@ html {
 }
 
 .pimg2 {
-    background: url("image3.jpg");
+    background: url("image3-min.jpg");
     min-height: 400px;
     position: relative;
     opacity: 0.70;
@@ -36,7 +87,7 @@ html {
 }
 
 .pimg3 {
-    background: url("image4.jpg");
+    background: url("image4-min.jpg");
     min-height: 400px;
     position: relative;
     opacity: 0.70;
@@ -65,12 +116,146 @@ html {
     background-attachment: fixed;
 }
 
-.ptext {
-    position: absolute;
+.border p {
+    line-height: 50vh;
     text-align: center;
-    top: 50%;
     width: 100%;
     font-size: 30px;
     letter-spacing: 8px;
     text-transform: uppercase;
+}
+
+.border h5 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+}
+
+.section {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.section-dark {
+    background: rgb(15, 15, 15);
+    color: white;
+}
+
+.section h2 {
+    font-size: 30px;
+}
+
+@media screen and (max-width:800px) {
+    .ham {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 6%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 20px;
+        height: 20px;
+        padding: 1rem;
+        display: flex;
+    }
+    .box {
+        display: flex;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 6%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .ham>div {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(196, 196, 196);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.6s ease;
+    }
+    .ham>div::before,
+    .ham>div::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+    }
+    .ham>div::after {
+        top: 10px;
+    }
+    .box:checked+.ham>div {
+        transform: rotate(135deg);
+    }
+    .box:checked+.ham>div::before,
+    .box:checked+.ham>div::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    .nav-bar .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .nav-bar .menu>div {
+        background: rgba(0, 0, 0, 0.884);
+        border-radius: 40%;
+        width: 200vw;
+        height: 200vh;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all 0.4s ease;
+    }
+    .nav-bar .menu>div>div {
+        text-align: center;
+        display: grid;
+        color: rgb(204, 202, 202);
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 1.4s ease;
+    }
+    .nav-bar .menu>div>div>ul>a {
+        color: inherit;
+        transition: color 0.4s ease;
+    }
+    .nav-bar .box:checked~.menu {
+        visibility: visible;
+    }
+    .nav-bar .box:checked~.menu>div {
+        transform: scale(1);
+        transition-duration: 2s;
+    }
+    .nav-bar .menu>div>div {
+        opacity: 1;
+    }
+    .nav-bar .box:checked~.menu>div>div>ul {
+        opacity: 1;
+    }
 }
