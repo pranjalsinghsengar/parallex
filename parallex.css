@@ -47,7 +47,7 @@ ul a {
     height: 2px;
     display: block;
     transition: width .6s;
-    background: rgba(0, 0, 0, 0.568);
+    background: rgba(56, 55, 55, 0.973);
     margin: 3px 0;
 }
 
@@ -57,7 +57,7 @@ ul a {
 }
 
 .pimg1 {
-    background: url("image2-min.jpg");
+    background: url("../pics/image2-min.jpg");
     min-height: 100%;
     position: relative;
     opacity: 0.70;
@@ -72,7 +72,7 @@ ul a {
 }
 
 .pimg2 {
-    background: url("image3-min.jpg");
+    background: url("../pics/image3-min.jpg");
     min-height: 400px;
     position: relative;
     opacity: 0.70;
@@ -87,7 +87,7 @@ ul a {
 }
 
 .pimg3 {
-    background: url("image4-min.jpg");
+    background: url("../pics/image4-min.jpg");
     min-height: 400px;
     position: relative;
     opacity: 0.70;
@@ -102,7 +102,7 @@ ul a {
 }
 
 .pimg4 {
-    background: url("image2.jpg");
+    background: url("../pics/image2-min.jpg");
     min-height: 400px;
     position: relative;
     opacity: 0.70;
@@ -144,8 +144,7 @@ ul a {
 }
 
 .section-dark {
-    background: rgb(15, 15, 15);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .section h2 {
@@ -181,7 +180,7 @@ ul a {
         position: relative;
         width: 100%;
         height: 2px;
-        background-color: rgb(196, 196, 196);
+        background-color: rgb(255, 251, 251);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -221,7 +220,7 @@ ul a {
         visibility: hidden;
     }
     .nav-bar .menu>div {
-        background: rgba(0, 0, 0, 0.884);
+        background: rgba(13, 192, 216, 0.397);
         border-radius: 40%;
         width: 200vw;
         height: 200vh;
@@ -260,15 +259,49 @@ ul a {
     }
 }
 
-.section {
-    text-align: center;
+@media screen and (max-width:600px) {
+    .nav-bar .menu a {
+        margin: 10px;
+    }
+    .section {
+        padding: 0;
+    }
 }
 
-.section-dark {
-    background: rgb(15, 15, 15);
-    color: white;
+@media screen and (max-width:433px) {
+    ul {
+        margin: 10px;
+        display: grid;
+        grid-row: auto;
+    }
+    .border h5 {
+        line-height: 5vh;
+    }
 }
 
-.section h2 {
-    font-size: 30px;
+@media screen and (max-width:350px) {
+    .nav-bar h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .nav-bar h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .nav-bar h1 {
+        position: absolute;
+        top: 34px;
+        margin: 0;
+        padding: 0;
+        left: 20px;
+        font-size: 20px;
+    }
+    .ham {
+        width: 15px;
+        height: 5px;
+    }
 }
